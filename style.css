@@ -1,0 +1,90 @@
+body {
+  background: #eee;
+  font-family: Arial, sans-serif;
+}
+
+.phone {
+  width: 360px;
+  height: 640px;
+  background: #f7f5f2;
+  margin: 30px auto;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.header {
+  background: #b83b32;
+  color: white;
+  padding: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.chat {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+.bot, .user {
+  max-width: 75%;
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.bot {
+  background: #e0e0e0;
+  align-self: flex-start;
+}
+
+.user {
+  background: #c44536;
+  color: white;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.input-area {
+  display: flex;
+  padding: 10px;
+  background: white;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.input-area button {
+  margin-left: 8px;
+  border: none;
+  background: #c44536;
+  color: white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.actions button {
+  background: #c44536;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 14px;
+  font-size: 12px;
+  cursor: pointer;
+}
