@@ -1,0 +1,8 @@
+venv/
+vasu_embeddings_cache.pkl
+vahni.log
+test.json
+VAHNItst.py
+__pycache__/
+*.pyc
+.DS_Store

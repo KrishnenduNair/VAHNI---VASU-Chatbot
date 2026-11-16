@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VAHNI Assistant</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+<div class="phone">
+  <div class="header">Chatbot Assistant</div>
+
+  <div class="chat" id="chat">
+    <div class="bot">
+      Hi! How can I help you with chemistry today?
+    </div>
+  </div>
+
+  <div class="input-area">
+    <input id="input" placeholder="Type your question..." onkeydown="if(event.key==='Enter') send()" />
+    <button onclick="send()">➤</button>
+  </div>
+
+  <div class="actions">
+    <button onclick="explainConcept()">Explain Concept</button>
+    <button onclick="solveProblem()">Solve Problem</button>
+    <button onclick="suggestTopics()">Suggest Topics</button>
+  </div>
+</div>
+
+<script>
+async function send() {
+  const input = document.getElementById("input");
+  const text = input.value.trim();
+  if (!text) return;
+
+  addMessage(text, "user");
+  input.value = "";
+
+  try {
+    const res = await fetch(`/chat?query=${encodeURIComponent(text)}`);
+    const data = await res.json();
+
+    if (data.status === 'success') {
+      addMessage(data.response, "bot");
+    } else {
+      addMessage("Error: " + (data.message || data.response), "bot");
+    }
+  } catch (err) {
+    console.error("Error:", err);
+    addMessage("Connection error!", "bot");
+  }
+}
+
+function explainConcept() {
+  addMessage("Explain Concept", "user");
+  addMessage("Sure! Which chemistry concept would you like me to explain? For example: ionic bonding, isotopes, pH scale, mole concept, etc.", "bot");
+  document.getElementById("input").focus();
+}
+
+function solveProblem() {
+  addMessage("Solve Problem", "user");
+  addMessage("Of course! Please type the numerical problem you'd like me to solve. For example: 'find the pH of 0.01M HCl' or 'calculate moles in 36g of water'.", "bot");
+  document.getElementById("input").focus();
+}
+
+async function suggestTopics() {
+  addMessage("Suggest Topics", "user");
+
+  const topics = [
+    { chapter: "Matter in Our Surroundings", topics: ["States of Matter", "Evaporation", "Latent Heat", "Diffusion"] },
+    { chapter: "Atoms and Molecules", topics: ["Mole Concept", "Molecular Mass", "Balancing Equations", "Avogadro's Number"] },
+    { chapter: "Structure of the Atom", topics: ["Bohr's Model", "Isotopes", "Valence Electrons", "Atomic Number"] },
+    { chapter: "Acids, Bases and Salts", topics: ["pH Scale", "Neutralization", "Indicators", "Salts"] },
+    { chapter: "Metals and Non-metals", topics: ["Reactivity Series", "Ionic Bonding", "Corrosion", "Extraction"] },
+    { chapter: "Carbon and its Compounds", topics: ["Catenation", "Homologous Series", "Functional Groups", "Isomerism"] },
+    { chapter: "Chemical Reactions", topics: ["Combination", "Decomposition", "Displacement", "Redox Reactions"] },
+  ];
+
+  let msg = "Here are some topics you can explore:\n\n";
+  topics.forEach(({ chapter, topics }) => {
+    msg += `${chapter}\n`;
+    topics.forEach(t => msg += `${t}\n`);
+    msg += "\n";
+  });
+  msg += "Just type any topic and I'll explain it!";
+
+  addMessage(msg, "bot");
+}
+
+function quick(text) {
+  document.getElementById("input").value = text;
+  send();
+}
+
+function addMessage(text, who) {
+  const chat = document.getElementById("chat");
+  const div = document.createElement("div");
+  div.className = who;
+  div.innerText = text;
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+</script>
+
+</body>
+</html>

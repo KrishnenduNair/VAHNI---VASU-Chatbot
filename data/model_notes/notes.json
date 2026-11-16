@@ -1,0 +1,23 @@
+{
+  "Methane": {
+    "model_file": "methane.fbx",
+    "topic": "Methane Formation",
+    "annotations": [
+      "Carbon has 4 outer electrons.",
+      "Each Hydrogen has 1 electron.",
+      "Carbon shares one electron with each Hydrogen.",
+      "This forms 4 C-H bonds and creates a stable methane molecule."
+    ],
+    "analogy": "Carbon is like a student who needs 4 people for a group chat to share homework answers. Each hydrogen joins in, and when all 4 connect, everyone has the complete set of answers they need - perfectly balanced and nobody's left out."
+  },
+  "Calcium_Atom": {
+    "model_file": "calcium_atom.fbx",
+    "topic": "Calcium Atom",
+    "annotations": [
+      "This model shows a single calcium atom.",
+      "It has 2 electrons in its outermost orbit.",
+      "These are the electrons calcium can give away during reactions."
+    ],
+    "analogy": "Calcium is like someone carrying 2 extra tickets to a concert. It's happy to give them away to atoms that need them, and doing so actually makes calcium more stable and 'content' with what it has left."
+  }
+}
