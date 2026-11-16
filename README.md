@@ -1,7 +1,9 @@
 # VAHNI---VASU-Chatbot
 
-<img width="368" height="597" alt="V.A.H.N.I Chatbot Screenshot 1" src="[https://github.com/user-attachments/assets/d2e3b23e-b3a2-4356-85c8-03793c225da8](https://github.com/user-attachments/assets/d2e3b23e-b3a2-4356-85c8-03793c225da8)" /> 
-<img width="368" height="597" alt="V.A.H.N.I Chatbot Screenshot 2" src="[https://github.com/user-attachments/assets/56f501f6-a726-4eb0-bdab-1158d6359c6c](https://github.com/user-attachments/assets/56f501f6-a726-4eb0-bdab-1158d6359c6c)" />
+<p align="center">
+  <img width="368" alt="V.A.H.N.I Chatbot Screenshot 1" src="https://github.com/user-attachments/assets/d2e3b23e-b3a2-4356-85c8-03793c225da8" />
+  <img width="368" alt="V.A.H.N.I Chatbot Screenshot 2" src="https://github.com/user-attachments/assets/56f501f6-a726-4eb0-bdab-1158d6359c6c" />
+</p>
 
 ## About
 
