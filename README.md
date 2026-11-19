@@ -7,7 +7,7 @@
 
 ## About
 
-**V.A.H.N.I (Virtual Assistant Helping Novel Insights)** is an AI-powered chemistry chatbot developed as part of the V.A.S.U. project. It helps students explore chemistry concepts through natural language questions and AI-generated responses.
+**V.A.H.N.I (Virtual Assistant Helping Novel Insights)** is an AI-powered chemistry chatbot developed as part of the V.A.S.U. project. It helps students explore chemistry concepts through natural language questions and AI-generated responses. The app uses Ollama Mistral so as to generate answers from the context that is generated from the user query.
 
 ## Features
 
